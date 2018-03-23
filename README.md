@@ -23,7 +23,7 @@ if you need any further information don't hesitate to contact me <br />
                   method="POST">
                 <p>Name: </p><input type="text" name="name"><br />
                 <p>Email: </p><input type="email" name="_replyto"> <br />
-           <p>Message:</p><textarea name="Message" cols="30" rows="10" class="form-control"></textarea><br/>
+           <p>Message:</p><textarea name="Message" cols="60" rows="10" class="form-control"></textarea><br/>
                 <input type="submit" value="Send"><br />
             </form>
       
