@@ -14,7 +14,7 @@
 <ul>
 @foreach($tasks as $task)
     <li>
-        <a href="/pro/public/tasks/{{$task->id}}">
+        <a href="/blog/public/tasks/{{$task->id}}">
             {{$task->body}}
                 </a>
 

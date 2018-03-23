@@ -14,12 +14,12 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link href="{{URL::asset('css/blog.css')}}" rel="stylesheet">
+    <link href="<?php echo e(URL::asset('css/blog.css')); ?>" rel="stylesheet">
 </head>
 
 <body>
 
-@include ('layouts.nav')
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <div class="blog-header">
     <div class="container">
         <h1 class="blog-title">Ahmad Ibarhim's Personal Blog</h1>
@@ -31,17 +31,17 @@
 
     <div class="row">
 
-                @yield ('content')
+                <?php echo $__env->yieldContent('content'); ?>
 
 
-            @include('layouts.sidebar')
+            <?php echo $__env->make('layouts.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div><!-- /.blog-main -->
 
 
     </div><!-- /.row -->
 
 </div><!-- /.container -->
-            @include ('layouts.footer')
+            <?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 </body>
 </html>
